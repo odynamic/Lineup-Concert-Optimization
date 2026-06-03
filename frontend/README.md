@@ -1,16 +1,31 @@
-# React + Vite
+# Lineup Concert Optimization
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Optimasi penjadwalan lineup konser menggunakan Algoritma Genetika (Genetic Algorithm) untuk menghasilkan susunan penampilan artis yang lebih optimal berdasarkan berbagai kriteria dan batasan yang telah ditentukan.
 
-Currently, two official plugins are available:
+## Deskripsi Proyek
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Proyek ini dikembangkan sebagai implementasi Algoritma Genetika dalam menyelesaikan permasalahan optimasi penjadwalan lineup konser. Sistem menerima data artis dan slot penampilan, kemudian melakukan proses evolusi untuk mencari susunan lineup dengan nilai fitness terbaik. Algoritma Genetika yang digunakan mencakup tahapan:
+- Representasi Solusi
+- Inisialisasi Populasi
+- Perhitungan Fitness
+- Seleksi Parent
+- Crossover
+- Mutasi
+- Update Generasi
+- Evaluasi Solusi Terbaik
 
-## React Compiler
+## Teknologi yang Digunakan
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Backend
+- Python
+- FastAPI
 
-## Expanding the ESLint configuration
+### Frontend
+- React
+- Vite
+- JavaScript
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Optimization Engine
+- Genetic Algorithm (GA)
+
+---
