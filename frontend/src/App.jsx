@@ -355,7 +355,7 @@ const handleLoadDemoDataset = async () => {
                 <div className="text-center py-4 flex flex-col items-center">
                   <Database size={28} className={dataset ? "text-[#10B981]" : "text-gray-600"} />
                   <p className="text-[11px] text-gray-500 mt-2">
-                    {dataset ? `${dataset.summary.total_artists} baris data termuat.` : "Sistem menerima data konser umum via Excel / CSV."}
+                    {dataset ? `${dataset.summary.total_artists} baris data termuat.` : "Sistem menerima data konser umum via Excel/CSV."}
                   </p>
                 </div>
                 {dataset && (

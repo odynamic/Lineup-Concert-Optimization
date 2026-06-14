@@ -75,13 +75,13 @@ def calculate_fitness(chromosome, df_day, w1, w2, w3):
             energy_score -= abs(diff) * 2  # Pinalti jika drop drastis
 
     for i in range(n):
-        popularity_score += popularities[i] * (i + 1)
+        popularity_score += popularities[i] * i
 
     if is_headliner[-1] == 1:
-        headliner_score += 100
+        headliner_score += 50
     else:
         if 1 in is_headliner:
-            headliner_score -= 200  # Penalti berat jika aturan dilanggar
+            headliner_score -= 50  # Penalti berat jika aturan dilanggar
 
     return (w1 * energy_score) + (w2 * popularity_score) + (w3 * headliner_score)
 
@@ -157,9 +157,9 @@ def run_evolution_engine(df_day, req: OptimizeRequest):
 
     return best_overall_chromosome, best_overall_fitness
 
-# ==========================================
-# 3. ENDPOINT API: PROSES OPTIMASI DINAMIS
-# ==========================================
+# =================================
+# 3. ENDPOINT API: PROSES OPTIMASI 
+# =================================
 
 @app.post("/api/optimize")
 def optimize_api(payload: OptimizeRequest):
